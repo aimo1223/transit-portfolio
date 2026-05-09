@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transit Analytics Portfolio — Aidan Moran</title>
+    <style>
+        :root {
+            --navy: #1a2332;
+            --blue: #2E86AB;
+            --light-blue: #e8f4f8;
+            --orange: #F18F01;
+            --dark: #2c3e50;
+            --gray: #6c757d;
+            --light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: var(--light);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            color: var(--white);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .hero .author {
+            font-size: 0.95rem;
+            opacity: 0.75;
+        }
+
+        .hero .author a {
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        /* Skills bar */
+        .skills-bar {
+            background: var(--navy);
+            padding: 16px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .skills-bar span {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.85);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 4px 4px;
+        }
+
+        /* Main */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--blue);
+            display: inline-block;
+        }
+
+        /* Project cards */
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--blue);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .project-card.planned {
+            border-left-color: var(--gray);
+            opacity: 0.8;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .project-card .status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .status.active {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.planned {
+            background: #e2e3e5;
+            color: #495057;
+        }
+
+        .project-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .project-card .tag {
+            background: var(--light-blue);
+            color: var(--blue);
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .project-card .links a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 20px;
+        }
+
+        .project-card .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* About */
+        .about {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-top: 40px;
+        }
+
+        .about h2 {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .about a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .project-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Transit Analytics Portfolio</h1>
+    <p class="subtitle">Exploring public transit systems through data — ridership patterns, spatial analysis, and performance benchmarks.</p>
+    <p class="author">Aidan Moran &middot; <a href="https://www.linkedin.com/in/aidan-moran-043a65159/">LinkedIn</a> &middot; <a href="https://github.com/aidanmoran">GitHub</a></p>
+</div>
+
+<div class="skills-bar">
+    <span>Python</span>
+    <span>Pandas</span>
+    <span>SQL</span>
+    <span>Matplotlib</span>
+    <span>Folium</span>
+    <span>QGIS</span>
+    <span>GeoPandas</span>
+    <span>Jupyter</span>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-card">
+        <h3>NYC MTA Turnstile Ridership Analysis</h3>
+        <span class="status active">In Progress</span>
+        <p>Deep dive into NYC subway ridership using MTA turnstile audit data. Analyzing entry/exit patterns by time of day, day of week, and station to uncover how the system is used — and how usage has shifted post-pandemic.</p>
+        <div class="tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Folium</span>
+            <span class="tag">Time Series</span>
+        </div>
+        <div class="links">
+            <a href="#">View Notebook &rarr;</a>
+            <a href="#">Source Data</a>
+        </div>
+    </div>
+
+    <div class="project-card active">
+        <h3>MARTA Service Performance Analysis</h3>
+        <span class="status active">In Progress</span>
+        <p>Deep dive into MARTA's scheduled service quality using GTFS data — analyzing headways, service frequency, peak vs. off-peak patterns, and geographic coverage. Benchmarked against MARTA's published KPI targets including the 6.96% bus missed trip rate.</p>
+        <div class="tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Folium</span>
+            <span class="tag">GTFS</span>
+            <span class="tag">Service Analysis</span>
+        </div>
+        <a href="https://github.com/YOUR_USERNAME/transit-portfolio/blob/main/notebooks/02_marta_service_performance.ipynb" target="_blank">View Notebook</a> |
+        <a href="https://itsmarta.com/app-developer-resources.aspx" target="_blank">Data Source</a>
+    </div>
+
+    <div class="project-card planned">
+        <h3>MARTA Ridership & Coverage Equity</h3>
+        <span class="status planned">Planned</span>
+        <p>Spatial analysis of Atlanta's MARTA system — mapping route coverage against population density, income, and car ownership to identify equity gaps in transit access. Combining GTFS feeds with Census ACS data.</p>
+        <div class="tags">
+            <span class="tag">QGIS</span>
+            <span class="tag">GeoPandas</span>
+            <span class="tag">GTFS</span>
+            <span class="tag">Census API</span>
+            <span class="tag">Spatial Analysis</span>
+        </div>
+    </div>
+
+    <div class="project-card planned">
+        <h3>National Transit Performance Benchmarks</h3>
+        <span class="status planned">Planned</span>
+        <p>Cross-agency comparison using National Transit Database metrics — ridership per capita, cost efficiency, farebox recovery, and on-time performance across the 50 largest U.S. transit systems.</p>
+        <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">NTD Data</span>
+            <span class="tag">Benchmarking</span>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>About</h2>
+        <p>I'm a Data Analyst with 4 years of experience building KPI monitoring systems, interactive dashboards, and automated reporting pipelines. I work primarily with SQL, Python, and Power BI.</p>
+        <p>Public transit is a personal passion — I'm especially interested in how data can improve service planning, ridership forecasting, and equitable access to transit. This portfolio showcases projects that combine my analytical skills with that passion.</p>
+        <p><a href="https://www.linkedin.com/in/aidan-moran-043a65159/">Connect on LinkedIn</a></p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Aidan Moran &middot; Built with data and curiosity
+</footer>
+
+</body>
+</html>
