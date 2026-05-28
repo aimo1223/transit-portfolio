@@ -19,6 +19,9 @@ env/
 .vscode/
 .idea/
 
+# Secrets
+config.env
+
 # OS
 .DS_Store
 Thumbs.db

@@ -228,8 +228,9 @@
     <span>SQL</span>
     <span>Matplotlib</span>
     <span>Folium</span>
-    <span>QGIS</span>
     <span>GeoPandas</span>
+    <span>QGIS</span>
+    <span>Census API</span>
     <span>Jupyter</span>
 </div>
 
@@ -283,16 +284,34 @@
         <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-368" target="_blank">Data Source</a>
     </div>
 
-    <div class="project-card planned">
-        <h3>MARTA Ridership & Coverage Equity</h3>
-        <span class="status planned">Planned</span>
-        <p>Spatial analysis of Atlanta's MARTA system — mapping route coverage against population density, income, and car ownership to identify equity gaps in transit access. Combining GTFS feeds with Census ACS data.</p>
+    <div class="project-card active">
+        <h3>Pedestrian Infrastructure Gap Analysis at MARTA Bus Stops</h3>
+        <span class="status active">In Progress</span>
+        <p>Spatial analysis of pedestrian infrastructure around 875 MARTA bus stops in DeKalb County. Combines OpenStreetMap sidewalk/crosswalk data, GDOT crash records, and Census ACS demographics to build a Pedestrian Access Score (PAS) for each stop. Finds 30% of stops have poor or no pedestrian infrastructure, with gaps disproportionately concentrated in majority-Black neighborhoods (r = &minus;0.49). Population-normalized crash analysis reveals the PAS&ndash;crash relationship disappears after controlling for density, suggesting suppressed pedestrian demand at infrastructure-poor stops.</p>
         <div class="tags">
-            <span class="tag">QGIS</span>
             <span class="tag">GeoPandas</span>
-            <span class="tag">GTFS</span>
-            <span class="tag">Census API</span>
-            <span class="tag">Spatial Analysis</span>
+            <span class="tag">Folium</span>
+            <span class="tag">Overpass API</span>
+            <span class="tag">Census ACS</span>
+            <span class="tag">GDOT Crashes</span>
+            <span class="tag">Equity Analysis</span>
+        </div>
+        <a href="https://github.com/aimo1223/transit-portfolio/blob/master/notebooks/04_dekalb_pedestrian_infrastructure.ipynb" target="_blank">View Notebook</a> |
+        <a href="maps/dekalb_pedestrian_access.html" target="_blank">Interactive Map</a> |
+        <a href="https://overpass-api.de" target="_blank">OSM Data</a>
+    </div>
+
+    <div class="project-card planned">
+        <h3>Network Walk-Shed & Transit Access Gaps</h3>
+        <span class="status planned">Planned</span>
+        <p>Extension of the pedestrian infrastructure analysis using OSMnx network-based walk-sheds instead of crow-flies buffers. Measures how cul-de-sac street layouts inflate real walking distances to bus stops, overlays GDOT traffic volumes for proper crash rate modeling, and cross-references gaps against DeKalb County's planned sidewalk investments.</p>
+        <div class="tags">
+            <span class="tag">OSMnx</span>
+            <span class="tag">NetworkX</span>
+            <span class="tag">GeoPandas</span>
+            <span class="tag">Folium</span>
+            <span class="tag">GDOT AADT</span>
+            <span class="tag">Isochrones</span>
         </div>
     </div>
 
