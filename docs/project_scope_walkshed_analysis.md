@@ -9,6 +9,8 @@ cut-throughs) inflate real walking distances and isolate neighborhoods from tran
 
 ---
 
+> **Findings update (2026-05-29).** After the full run across all 875 stops, detour-to-stop proved a *modest* barrier (median ≈ 1.2; few stops above 1.5) — MARTA stops sit on connected through-roads, so the grid near them is fairly direct. The sharper signal is **coverage**: the real network walk-shed reaches far fewer people than the crow-flies circle implies (see the walk-shed population work in Core Analysis 1). The dendritic 2–4× detours anticipated below live in outer-DeKalb sprawl not represented in this stop set. The sections below remain the original plan of record.
+
 ### Core Analyses
 
 #### 1. Network Walk-Shed Isochrones (OSMnx)

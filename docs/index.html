@@ -301,18 +301,21 @@
         <a href="https://overpass-api.de" target="_blank">OSM Data</a>
     </div>
 
-    <div class="project-card planned">
+    <div class="project-card active">
         <h3>Network Walk-Shed & Transit Access Gaps</h3>
-        <span class="status planned">Planned</span>
-        <p>Extension of the pedestrian infrastructure analysis using OSMnx network-based walk-sheds instead of crow-flies buffers. Measures how cul-de-sac street layouts inflate real walking distances to bus stops, overlays GDOT traffic volumes for proper crash rate modeling, and cross-references gaps against DeKalb County's planned sidewalk investments.</p>
+        <span class="status active">In Progress</span>
+        <p>Extension of the pedestrian-infrastructure analysis using OSMnx network walk-sheds instead of crow-flies buffers, across all 875 DeKalb bus stops. Computes real 5- and 10-minute walking isochrones, per-stop detour factors, and street-connectivity metrics (intersection density, dead-end ratio, circuity), then overlays Census block-group population on each walk-shed. The headline finding: crow-flies buffers overstate who can actually reach a stop on foot &mdash; in near-in DeKalb the street grid is well-connected, so walking detours stay modest and the access barrier shows up as <em>coverage gaps</em> rather than circuity. Adds a suppressed-demand proxy for transit-reliant riders and a prioritized list of underserved stops.</p>
         <div class="tags">
             <span class="tag">OSMnx</span>
             <span class="tag">NetworkX</span>
             <span class="tag">GeoPandas</span>
             <span class="tag">Folium</span>
-            <span class="tag">GDOT AADT</span>
             <span class="tag">Isochrones</span>
+            <span class="tag">Detour Factor</span>
         </div>
+        <a href="https://github.com/aimo1223/transit-portfolio/blob/master/notebooks/04b_dekalb_walkshed_analysis.ipynb" target="_blank">View Notebook</a> |
+        <a href="maps/dekalb_walkshed_detour.html" target="_blank">Interactive Map</a> |
+        <a href="https://osmnx.readthedocs.io" target="_blank">OSMnx</a>
     </div>
 
     <div class="project-card planned">

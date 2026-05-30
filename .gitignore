@@ -9,6 +9,8 @@ __pycache__/
 
 # Data
 data/raw/
+# Regenerable walk-shed cache (notebook 04b)
+data/processed/dekalb_walksheds.gpkg
 
 # Virtual environments
 .venv/

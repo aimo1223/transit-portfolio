@@ -9,3 +9,9 @@ requests>=2.31
 geopandas>=0.13
 shapely>=2.0
 nbconvert>=7.0
+
+# Notebook 04b — network walk-shed analysis (OSM + Census ACS)
+osmnx>=2.0
+networkx>=3.0
+pygris>=0.1
+scipy>=1.10        # required by osmnx.distance.nearest_nodes (cKDTree); not pulled in transitively
